@@ -298,7 +298,7 @@ def register():
         if request.form['account_type'] == 'admin':
             # redirect to admin registration page
             return redirect(url_for('register_admin'))
-        elif request.form['account_type'] == 'Care Provider':
+        elif request.form['account_type'] == 'careProvider':
             # redirect to Care Provider page
             return redirect(url_for('register_careProvider'))
         elif request.form['account_type'] == 'patient':
