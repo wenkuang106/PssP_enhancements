@@ -4,7 +4,6 @@ from flask_sqlalchemy import SQLAlchemy
 import os
 import datetime
 import uuid
-import MySQLdb
 
 load_dotenv('credentials.env')
 
