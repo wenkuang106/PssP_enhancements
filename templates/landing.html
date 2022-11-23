@@ -79,10 +79,43 @@
     <!-- <link href="starter-template.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="{{ url_for('static', filename='landing.css') }}"> 
     <script src="{{ url_for('static', filename='bootstrap.js') }}"></script>
-
+    <style>
+      .center {
+        position: absolute;
+        top: 60%;
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+      }
+      body, html {
+        height: 100%;
+        margin: 0;
+      }
+      .bg {
+        /* The image used */
+        background-image: url("https://images.everydayhealth.com/images/wellness/weekly-dose-of-nature-needed-for-wellness-rm-722x406.jpg");
+        /* Full height */
+        height: 100%; 
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .content {
+        position: relative;
+        top: 38%;
+        width: 100%;
+        text-align: center;
+        max-width: 70%;
+        margin: auto;
+        background: white;
+        opacity: 0.8;
+        padding: 10px;
+      }
+    </style>
   </head>
 
-  <body id="page-top">
+  <body>
     <!-- Navigation-->
     <nav class="navbar bg-light fixed-top">
       <div class="container-fluid">
@@ -109,13 +142,16 @@
       </div>
     </nav>      
     <!-- Header-->
-    <header class="masthead d-flex align-items-center">
-      <div class="container px-4 px-lg-5 text-center">
-        <h1 class="mb-1">Patient Self Service Portal</h1>
-        <h3 class="mb-5"><em>Start by either registering a new account, or sign-in to a existing account</em></h3>
-        <a class="btn btn-primary btn-xl" href="/login">Sign In</a>
-        <a class="btn btn-primary btn-xl" href="/register">Register</a>
+    <div class="bg">
+      <div class="content">
+        <div class="container px-4 px-lg-5 text-center">
+          <h1 class="mb-1">Patient Self Service Portal</h1>
+          <br>
+          <h3 class="mb-5"><em>Start by either registering a new account, or sign-in to a existing account</em></h3>
+          <a class="btn btn-primary btn-xl" href="/login">Sign In</a>
+          <a class="btn btn-primary btn-xl" href="/register">Register</a>
+        </div>
       </div>
-    </header>
+    </div>
   </body>
 </html>
