@@ -80,51 +80,25 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='landing.css') }}"> 
 
   </head>
-  <body>
 
-    <div class="container">
-      <div class="row">
-          <div class="span cont-full">
-              <div class="logo">
-                <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
-                  <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-                    <span class="fs-4">Patient Self Service Portal (PssP)</span>
-                  </a>
-                </header>
-              </div>
-          </div>
+  <body id="page-top">
+    <!-- Navigation-->
+    <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand"><a href="#page-top">Start Bootstrap</a></li>
+        <li class="sidebar-nav-item"><a href="/login">Sign In</a></li>
+        <li class="sidebar-nav-item"><a href="#about">Options</a></li>
+      </ul>
+    </nav>
+    <!-- Header-->
+    <header class="masthead d-flex align-items-center">
+      <div class="container px-4 px-lg-5 text-center">
+        <h1 class="mb-1">Patient Self Service Portal</h1>
+        <h3 class="mb-5"><em>Start by either registering a new account, or sign-in to a existing account</em></h3>
+        <a class="btn btn-primary btn-xl" href="/login">Sign In</a>
+        <a class="btn btn-primary btn-xl" href="/register">Register</a>
       </div>
-  </div>
-  <div id="boxLogin" class="formBox">
-
-    <div id="ctl00_ContentPlaceHolder1_Login2_divloginbox">
-        <h1 class="h1">
-            <span id="ctl00_ContentPlaceHolder1_Login2_lblHeading">Log into Patient Self Service Portal (PssP)</span>
-        </h1>      
-    </div>
-  </div>
-  <center>
-    <main>
-    <h1>Get started with your patient portal now!</h1>
-    <p class="fs-5 col-md-8"> Start by either registering a new account, or sign-in to a existing account</p>
-
-    <div class="mb-5">
-      <a href="/login" class="btn btn-primary btn-lg px-4">Sign in</a>
-      <a href="/register" class="btn btn-primary btn-lg px-4">Register</a>
-    </div>
-
-    <hr class="col-3 col-md-2 mb-5">
-
-  </main>
-  </center>  
-  <footer class="pt-5 my-5 text-muted border-top">
-    Created by AHI Program  &middot; &copy; 2022
-  </footer>
-</div>
-
-
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
-      
+    </header>
   </body>
 </html>
