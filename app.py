@@ -4,6 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 import os
 import datetime
 import uuid
+import MySQLdb
 
 load_dotenv('credentials.env')
 
@@ -647,4 +648,5 @@ def delete_patient(mrn):
     return jsonify({'result': True})
 
 if __name__ == '__main__':
+    
     app.run(debug=True, host='0.0.0.0', port=80)
