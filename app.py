@@ -14,7 +14,7 @@ GCP_MYSQL_HOSTNAME = os.getenv("GCP_MYSQL_HOSTNAME")
 db = SQLAlchemy()
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqldb://' + GCP_MYSQL_USER + ':' + GCP_MYSQL_PASSWORD + '@' + GCP_MYSQL_HOSTNAME + ':3306/patient_portal'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://' + GCP_MYSQL_USER + ':' + GCP_MYSQL_PASSWORD + '@' + GCP_MYSQL_HOSTNAME + ':3306/patient_portal'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'sdf#$#dfjkhdf0SDJH0df9fd98343fdfu34rf'
 
@@ -41,7 +41,6 @@ class Users(db.Model):
         self.mrn = mrn
         self.date_created = date_created
         self.last_login = last_login
-
 
     def to_json(self):
         return {
